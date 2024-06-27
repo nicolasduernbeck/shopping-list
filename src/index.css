@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.box {
+  height: 20rem;
+  width: 15rem;
+  background-color: rgb(219, 219, 219);
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.box > h1 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.box > h2 {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.box > button {
+  background-color: rgb(6, 114, 255);
+  color: white;
+  border: 0;
+  padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+}
+
+.box > button:hover {
+  cursor: pointer;
+}
