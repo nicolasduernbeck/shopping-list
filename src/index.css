@@ -5,16 +5,10 @@
   font-family: sans-serif;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
 .container {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  width: 100vw;
 }
 
 .box {
@@ -46,4 +40,14 @@ body {
 
 .box > button:hover {
   cursor: pointer;
+}
+
+.cart {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
 }

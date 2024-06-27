@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Item from './components/Item';
+import Cart from './components/Cart';
 
 const products = [
   { name: 'Apfel', price: 0.99, id: 0 },
@@ -16,9 +17,8 @@ const products = [
 ];
 
 function App() {
-  const [cart, setCart] = useState([{ id: 1 }]);
+  const [cart, setCart] = useState([]);
 
-  console.log(cart);
   function handleAddToCart(id) {
     setCart(cart => {
       const isInCart = cart.some(item => item.id === id);
@@ -32,11 +32,14 @@ function App() {
     });
   }
   return (
-    <div className="container">
-      {products.map(product => (
-        <Item name={product.name} price={product.price} key={product.id} id={product.id} onAddToCart={handleAddToCart} />
-      ))}
-    </div>
+    <>
+      <Cart items={cart} />
+      <div className="container">
+        {products.map(product => (
+          <Item name={product.name} price={product.price} key={product.id} id={product.id} onAddToCart={handleAddToCart} />
+        ))}
+      </div>
+    </>
   );
 }
 
